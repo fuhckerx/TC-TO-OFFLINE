@@ -272,7 +272,7 @@ async def ready_packet(bot_uid, K, V):
     fields = {1: 15, 2: {1: int(bot_uid)}}
     return await GeneRaTePk((await CrEaTe_ProTo(fields)).hex(), '0515', K, V)
 
-async def ready_unready_spam(bot_uid, key, iv, duration=40):
+async def ready_unready_spam(bot_uid, key, iv, duration=10):
     global spam_running, online_writer
     spam_running = True
     count = 0
